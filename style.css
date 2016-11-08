@@ -1,0 +1,154 @@
+.ball-running {
+  animation: run-around 4s infinite;
+}
+
+@keyframes run-around {
+  0%: {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(200px, 0);
+  }
+
+  50% {
+    transform: translate(200px, 200px);
+  }
+
+  75% {
+    transform: translate(0, 200px);
+  }
+}
+
+
+.example2 {
+  transform: rotateZ(360deg);
+}
+
+.room-scene__wrapper {
+    /*border: 1px solid #999;*/
+    height: 95vh;
+    overflow: hidden;
+    position: relative;
+    width: 95vw;
+}
+
+.room-scene__wrapper svg {
+    height: 95vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc( 95vh * 1.43582);
+}
+
+.room-scene__wrapper svg image {
+    opacity: 0.1;
+}
+
+@media screen and (min-aspect-ratio: 4/3) { /* long landscape */
+    .room-scene__wrapper svg {
+        border: 2px solid #ffcccc;
+        height: 110vh;
+        width: calc( 110vh * 1.43582);
+    }
+}
+
+@media screen and (min-aspect-ratio: 3/2) { /* longer landscape */
+    .room-scene__wrapper svg {
+        border: 2px solid #cc9999;
+        height: 125vh;
+        width: calc( 125vh * 1.43582);
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/1) { /* longest landscape */
+    .room-scene__wrapper svg {
+        border: 2px solid #996666;
+        height: 140vh;
+        width: calc( 140vh * 1.43582);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESETS */
+
+html, body, div, span, section, ul, li, h1, h2, h3, h4, h5 {
+    box-sizing: border-box;
+    color: $color-dark-gray;
+    font-family: "Kozuka Gothic Pro";
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.svg-defs {
+    height: 0;
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+}
+
+
+
+
+
+
+
+/*  OLD STUFF
+
+
+@media screen and (orientation: portrait) {
+    .room-scene__wrapper svg {
+        border: 2px solid #ccccff;
+        height: 140vh;
+        width: calc( 140vh * 1.43582);
+    }
+
+    @media screen and (max-aspect-ratio: 3/4) {
+        .room-scene__wrapper svg {
+            border: 2px solid #9999cc;
+            height: 125vh;
+            width: calc( 125vh * 1.43582);
+        }
+    }
+
+    @media screen and (max-aspect-ratio: 2/3) {
+        .room-scene__wrapper svg {
+            border: 2px solid #666699;
+            height: 110vh;
+            width: calc( 110vh * 1.43582);
+        }
+    }
+
+    @media screen and (max-aspect-ratio: 1/2) {
+        .room-scene__wrapper svg {
+            border: 2px solid #333366;
+        }
+    }
+}
+
+*/

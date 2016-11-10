@@ -1,3 +1,52 @@
+/* ------------------ ############ RESETS ############ ------------------ */
+
+html, body, div, span, section, ul, li, h1, h2, h3, h4, h5 {
+  box-sizing: border-box;
+  color: #222;
+  font-family: "Kozuka Gothic Pro";
+  font-family: 'Abril Fatface', cursive;
+  font-weight: lighter;
+  margin: 0;
+  padding: 0; }
+
+ul, li {
+  list-style: none; }
+
+.svg-defs {
+    
+  position: absolute;
+  z-index: -1; }
+
+
+/* ------------------ ############ GENERAL ############ ------------------ */
+
+
+
+/* ------------------ ############ ROOM SCENE ############ ------------------ */
+.room-scene__wrapper {
+    /*border: 1px solid #999;*/
+    height: 95vh;
+    overflow: hidden;
+    position: relative;
+    width: 95vw;
+}
+
+.room-scene__wrapper svg {
+    height: 95vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc( 95vh * 1.43582);
+}
+
+.room-scene__wrapper svg image {
+    opacity: 0.1;
+}
+
+
+
+/* ------------------ ############ ROOM SCENE - ZOOMED ############ ------------------ */
+
 .ball-running {
   animation: run-around 4s infinite;
 }
@@ -25,24 +74,27 @@
   transform: rotateZ(360deg);
 }
 
-.room-scene__wrapper {
-    /*border: 1px solid #999;*/
-    height: 95vh;
-    overflow: hidden;
-    position: relative;
-    width: 95vw;
+
+
+/* ------------------ ############ VIEWPORT SIZE ADJUSTMENTS ############ ------------------ */
+
+@media screen and (min-width: 768px) {
 }
 
-.room-scene__wrapper svg {
-    height: 95vh;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: calc( 95vh * 1.43582);
+@media screen and (min-aspect-ratio: 20 / 19) {
+
+    flex-direction: row; 
+    flex-direction: column;
+}
+@media screen and (min-width: 1024px) and (min-aspect-ratio: 1 / 1) {
 }
 
-.room-scene__wrapper svg image {
-    opacity: 0.1;
+/* ------------------ ############ VIEWPORT ORIENTATION ADJUSTMENTS ############ ------------------ */
+
+@media screen and (orientation: portrait) {
+    .room-scene__wrapper svg {
+        border: 2px solid #ccccff;
+    }
 }
 
 @media screen and (min-aspect-ratio: 4/3) { /* long landscape */
@@ -72,6 +124,16 @@
 
 
 
+/* ------------------ ############ jjjjjjjj ############ ------------------ */
+
+
+
+
+/* ------------------ ############ jjjjjjjj ############ ------------------ */
+
+
+
+/* ------------------ ############ jjjjjjjj ############ ------------------ */
 
 
 
@@ -90,27 +152,15 @@
 
 
 
-/* RESETS */
+/* --------- pppppppp ----------- */
+/* --------- pppppppp ----------- */
 
-html, body, div, span, section, ul, li, h1, h2, h3, h4, h5 {
-    box-sizing: border-box;
-    color: $color-dark-gray;
-    font-family: "Kozuka Gothic Pro";
-    font-weight: lighter;
-    margin: 0;
-    padding: 0;
-}
 
-ul, li {
-    list-style: none;
-}
 
-.svg-defs {
-    height: 0;
-    position: absolute;
-    visibility: hidden;
-    width: 0;
-}
+
+
+/*  
+------------------ ############ ANIMATION EXAMPLE ############ ------------------
 
 
 
@@ -118,8 +168,12 @@ ul, li {
 
 
 
-/*  OLD STUFF
 
+
+------------------ ############ OLD STUFF ############ ------------------
+
+.scene-grid__scene:nth-child(n+5) {
+  display: none; }
 
 @media screen and (orientation: portrait) {
     .room-scene__wrapper svg {

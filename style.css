@@ -35,20 +35,37 @@ ul, li {
 
 
 /* ------------------ ############ ROOM SCENE ############ ------------------ */
-.room-scene__wrapper {
-    height: 100vh;
+.room-scene__svg-wrapper {
+    /*height: 100vh;
     overflow: hidden;
+    width: 100vw;*/
+}
+
+.room-scene__svg-wrapper,
+.room-scene__image {
+    height: 100vh;
     position: absolute;
 	right: 0;
 	top: 0;
-    width: 100vw;
+    width: 143.582vh;
 }
 
-.room-scene__group,
-.room-scene__image {
+/*.room-scene__image {
 	height: 100vh;
-    /*width: calc( 95vh * 1.43582);*/
 	width: 143.582vh;
+}*/
+
+.room-scene__svg-wrapper {
+    overflow: hidden;
+    z-index: 2;
+}
+
+.room-scene__svg {
+    position: absolute;
+	right: 0;
+	top: -5.07%;
+    width: 23.68125701%;
+    z-index: 9;
 }
 
 
@@ -98,7 +115,7 @@ ul, li {
 
 
 @media screen and (min-aspect-ratio: 4/3) { /* long landscape */
-    .room-scene__group,
+    .room-scene__svg-wrapper,
 	.room-scene__image {
         /*border: 2px solid #ffcccc;*/
         height: 110vh;
@@ -107,7 +124,7 @@ ul, li {
 }
 
 @media screen and (min-aspect-ratio: 3/2) { /* longer landscape */
-    .room-scene__group,
+    .room-scene__svg-wrapper,
 	.room-scene__image {
         /*border: 2px solid #cc9999;*/
         height: 125vh;
@@ -116,7 +133,7 @@ ul, li {
 }
 
 @media screen and (min-aspect-ratio: 2/1) { /* longest landscape */
-    .room-scene__group,
+    .room-scene__svg-wrapper,
 	.room-scene__image {
         /*border: 2px solid #996666;*/
         height: 140vh;

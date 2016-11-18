@@ -5,6 +5,7 @@ import { RoomSceneComponent } from './room-scene.component';
   selector: 'perfect-color-app',
   template: `
             <room-scene></room-scene>
+            <room-scene-zoom></room-scene-zoom>
             `
 })
 

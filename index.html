@@ -19,11 +19,13 @@
 
 <perfect-color-app id="perfect-app-wrapper"></perfect-color-app>
 
-<!--2673 X 1863
+<!--
+room 2673 X 1862
+mask 633 X 1673
+(1862 - 1673) /  1862 * .2368
+((1862 - 1673) /  1673) * .2368
+height="89.84962406%" width="23.68125701%"
 
-// height="89.84962406%" width="23.68125701%"
-
-	// height="89.84962406%" width="23.68125701%"
 -->
 
 
@@ -32,9 +34,9 @@
 <!--
 
 <filter ng-repeat="color in appState.historyColors" id="scene__filter--{{$index}}">
-                        <feFlood id="stain-sample__filter--tint" flood-color="#{{color}}" result="tintHue" />
-                        <feBlend mode="multiply" in="tintHue" in2="SourceGraphic" result="darkenedSample" />
-                    </filter>
+		<feFlood id="stain-sample__filter--tint" flood-color="#{{color}}" result="tintHue" />
+		<feBlend mode="multiply" in="tintHue" in2="SourceGraphic" result="darkenedSample" />
+</filter>
 
  -->
 

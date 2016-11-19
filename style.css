@@ -55,65 +55,53 @@ ul, li {
 	right: 0;
 	top: -5.07%;
     width: 23.68125701%;
-    z-index: 9;
+    z-index: 3;
 }
 
 
 /* ------------------ ############ ROOM SCENE - ZOOMED ############ ------------------ */
 
 room-scene-zoom {
-	/*bottom: -2vh;
-	border: 1px solid #fff;
+    border: 1px solid #fff;
+	bottom: -2vh;
 	border-radius: 50%;
 	height: 50vh;
 	left: -2vh;
     overflow: hidden;
     position: absolute;
 	top: auto;
-	width: 50vh;*/
-
-	border: 1px solid #fff;
+	width: 50vh;
+/*
 	border-radius: 5%;
 	height: 100vh;
 	left: -2vh;
     overflow: hidden;
     position: absolute;
 	top: 0;
-	width: 100vw;
+	width: 100vw;*/
+    z-index: 2;
+}
+
+.room-scene-zoom__content-wrapper {
+    animation: pan-scene 10s infinite;
+    position: absolute;
+	transform: translate3d(0px, 0px, 0px);
 }
 
 .room-scene-zoom__svg-wrapper {
-    /*animation: run-around 4s infinite;*/
-    /*height: 100vh;*/
-	transform: rotateZ(360deg);
-    /*width: 50vh;*/
+    position: absolute;
 }
 
+.room-scene-zoom__content-wrapper,
 .room-scene-zoom__svg-wrapper,
 .room-scene-zoom__svg-wrapper .room-scene__svg,
-/*.room-scene-zoom__svg-wrapper .room-scene__svg image,*/
-.room-scene-zoom__svg-wrapper .room-scene-zoom__image {
-    height: 1600px;
+.room-scene-zoom__image {
+    height: 200vh;
     left: 0;
-    max-height: 1200px;
-    max-width: 600px;
+    max-height: 2400px;
+    max-width: 1200px;
     top: 0;
-    width: 800px;
-}
-
-.room-scene-zoom__svg-wrapper .room-scene-zoom__image {
-    /*display: block;*/
-}
-
-
-@keyframes run-around {
-  from {
-    transform: translate(0, 0);
-  }
-
-  to {
-    transform: translate(200px, 0);
-  }
+    width: 100vh;
 }
 
 
@@ -136,7 +124,6 @@ room-scene-zoom {
 @media screen and (min-aspect-ratio: 4/3) { /* long landscape */
     .room-scene__svg-wrapper,
 	.room-scene__image {
-        /*border: 2px solid #ffcccc;*/
         height: 110vh;
 		width: 157.94vh;
     }
@@ -145,7 +132,6 @@ room-scene-zoom {
 @media screen and (min-aspect-ratio: 3/2) { /* longer landscape */
     .room-scene__svg-wrapper,
 	.room-scene__image {
-        /*border: 2px solid #cc9999;*/
         height: 125vh;
 		width: 179.4775vh;
     }
@@ -154,7 +140,6 @@ room-scene-zoom {
 @media screen and (min-aspect-ratio: 2/1) { /* longest landscape */
     .room-scene__svg-wrapper,
 	.room-scene__image {
-        /*border: 2px solid #996666;*/
         height: 140vh;
         width: 201.015vh;
     }
@@ -163,9 +148,19 @@ room-scene-zoom {
 
 
 
-/* ------------------ ############ jjjjjjjj ############ ------------------ */
+/* ------------------ ############ ANIMATIONS ############ ------------------ */
 
-
+@keyframes pan-scene {
+  0 {
+      transform: translate3d(0px, 0px, 0px);
+  }
+  50% {
+      transform: translate3d(-10vw, -100vh, 0px);
+  }
+  100% {
+      transform: translate3d(0px, 0px, 0px);
+  }
+}
 
 
 /* ------------------ ############ jjjjjjjj ############ ------------------ */
